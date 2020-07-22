@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Estação Hack</string>
+
+
+    // Array para usar no Spinner de gênero, na activity de cadastro
+    <string-array name="arrayGenero">
+        <item>Feminino</item>
+        <item>Masculino</item>
+        <item>NB</item>
+        <item>Prefiro não informar</item>
+    </string-array>
+
+</resources>
