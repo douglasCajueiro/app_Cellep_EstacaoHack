@@ -49,7 +49,6 @@ class LoginActivity : AppCompatActivity() {
                     mIntent.putExtra("INTENT_EMAIL", usuario)
                     startActivity(mIntent)
                     finish()
-if((2*4))
 
                 } else {
 
