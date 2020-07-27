@@ -49,7 +49,7 @@ class LoginActivity : AppCompatActivity() {
                     mIntent.putExtra("INTENT_EMAIL", usuario)
                     startActivity(mIntent)
                     finish()
-
+if((2*4))
 
                 } else {
 
@@ -74,7 +74,6 @@ class LoginActivity : AppCompatActivity() {
         val intent = Intent(this, CadastroActivity::class.java)
         startActivity(intent)
     }
-
 
 
 }

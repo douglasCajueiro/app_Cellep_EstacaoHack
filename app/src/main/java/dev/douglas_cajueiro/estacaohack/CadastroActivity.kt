@@ -13,6 +13,7 @@ class CadastroActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cadastro)
 
+        ///////////////////////////////// Spinner /////////////////////////////////
         // Criar uma lista de opções para o Spinner
         val listaGenero = arrayListOf(
             "Selecione o Gênero", "Feminino", "Masculino", "NB", "Prefiro não informar")
@@ -25,6 +26,10 @@ class CadastroActivity : AppCompatActivity() {
 
         // Plugar o adaptador no Spinner
         spnGenero.adapter = generoAdapter
+        ///////////////////////////////// Spinner /////////////////////////////////
+
+
+        ///////////////////////////// Botão Cadastrar ///////////////////////////// INICIO
 
         // Escutando o botão btnCadastrar
         btnCadastrar.setOnClickListener{
@@ -49,6 +54,8 @@ class CadastroActivity : AppCompatActivity() {
                 Toast.makeText(this, "Preencha todos os campos", Toast.LENGTH_LONG).show()
             } else {
 
+                //////////////////// Configurando o SharedPreferences //////////////////// INICIO
+
                 // Acessar o arquivo de preferencias compartilhadas
                 val minhasPreferencias = getSharedPreferences("cadastro-$email", Context.MODE_PRIVATE)
 
@@ -60,6 +67,8 @@ class CadastroActivity : AppCompatActivity() {
                 editPrefs.putString("SENHA", senha)
                 editPrefs.putString("GENERO", genero)
                 editPrefs.apply()
+
+                //////////////////// Configurando o SharedPreferences //////////////////// FIM
 
                 // Abrir MainActivity
                 val mIntent = Intent(this, MainActivity::class.java)
@@ -74,5 +83,6 @@ class CadastroActivity : AppCompatActivity() {
 
             }
         }
+        ///////////////////////////// Botão Cadastrar ///////////////////////////// FIM
     }
 }
